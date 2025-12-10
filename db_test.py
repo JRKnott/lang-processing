@@ -1,0 +1,22 @@
+"""
+Simple Streamlit app to test DuckDB connection.
+"""
+import os
+
+# ✅ Set the environment variable AT THE VERY TOP
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
+import streamlit as st
+from backend.database import RAGDatabase
+from config import DEFAULT_DB_PATH
+
+st.title("Database Connection Test")
+
+db_path = DEFAULT_DB_PATH
+
+db = RAGDatabase(db_path)
+
+if db.test_connection():
+    st.success(f"✅ Connected to database: {db_path}")
+else:
+    st.error(f"❌ Failed to connect to database: {db_path}")
