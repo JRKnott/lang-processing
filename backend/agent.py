@@ -69,9 +69,9 @@ class RAGAgent:
         
          #Must update this because it is the point of the assignment
         agent = Agent(
-            role='TOPIC Content Assistant',
-            goal='Answer questions about TOPIC using the database',
-            backstory='You are an expert who has access to a database with content about the TOPIC.',
+            role='Investment Analysis Advisor',
+            goal='Answer questions and provide advice about the current market situation and investments using the database',
+            backstory='You are an expert who has access to a database with content about the Investments.You are knowledgeable about perfect market theory, sharpe ratios and other investment theories',
             tools=[query_tool],
             llm=llm,
             verbose=True, # Shows what the agent is doing
@@ -80,13 +80,17 @@ class RAGAgent:
         )
         
         # TO DO: Create the task
-        task = Task(description=question,
+        task1 = Task(description=question,
                     agent=agent,
                     expected_output="A comprehensive answer based on the database content.")
+        task2 = Task(description=question,
+                    agent=agent,
+                    expected_output="Give an investment suggestion in this format:" \
+                    "Ticker: NVDA, Stock: Nvidia, Suggestion: Buy")
         
         # TO DO: Create the Crew and run it
         crew = Crew(agents= [agent],
-                    tasks = [task],
+                    tasks = [task1, task2],
                     verbose = True,
                     max_rpm = 20)
         
