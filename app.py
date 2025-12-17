@@ -18,7 +18,7 @@ import config
 # Page Configuration (must be first Streamlit command)
 # -----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="AI Bubble RAG Assistant",
+    page_title="Investment Analysis RAG Assistant",
     page_icon="📖",
     layout="wide"
 )
@@ -111,17 +111,17 @@ with st.sidebar:
     # TO DO: Update for your project
     st.markdown("""
     ### About
-    This RAG assistant answers questions about the AI Bubble using:
-    - AI Bubble video transcripts
-    - Articles about the AI Bubble
-    - Research papers about the AI Bubble
+    This RAG assistant answers questions about the investing using:
+    - Analyst Ratings
+    - Financial News & Papers
+    - & More
     """)
 
 # -----------------------------------------------------------------------------
 # Main App Header
 # -----------------------------------------------------------------------------
-st.title("📖 AI Bubble RAG Assistant")
-st.markdown("Ask questions about the AI Bubble and get AI-powered answers based on curated content.")
+st.title("Investment Analysis RAG Assistant")
+st.markdown("Ask questions about investment advice and get AI-powered answers based on curated content.")
 
 # -----------------------------------------------------------------------------
 # Database Connection
@@ -181,7 +181,7 @@ for message in st.session_state.messages:
 # st.chat_input returns None until user submits, then returns their text
 # The := (walrus operator) assigns AND checks in one line
 
-if prompt := st.chat_input("Ask a question about AI Bubble..."):
+if prompt := st.chat_input("Ask a question about the technology sector..."):
     
     # TO DO: Add user message to history
     st.session_state.messages.append({"role":"user", "content":prompt})
@@ -238,9 +238,9 @@ if prompt := st.chat_input("Ask a question about AI Bubble..."):
 # TO DO: Example questions in an expander
 with st.expander("💡 Example Questions"):
     examples = [
-        "What is the AI Bubble?",
-        "Is the AI Bubble going to pop?",
-        "How dangerous is the AI Bubble?"
+        "What is a bubble?",
+        "When will the AI bubble pop?",
+        "What is some good general investment advice?"
     ]
     
     for example in examples:
