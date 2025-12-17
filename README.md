@@ -26,7 +26,7 @@ This above image shows the code I used to classify the role, goal, backstory, an
 
 ## Installation and setup instructions:
 Local: Download Folder, Create own datasources or use own. 
-run this: https://colab.research.google.com/drive/1a97iz9a4N8OzQ0_olHIXmvucVBY8GKRE?usp=sharing
+Run this: https://colab.research.google.com/drive/1a97iz9a4N8OzQ0_olHIXmvucVBY8GKRE?usp=sharing
 
 ## Streamlit APP Link:
 https://lang-processing-8aeydrvcgk6m6zb6ej5vtv.streamlit.app/
