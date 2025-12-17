@@ -25,4 +25,8 @@ For this project I utilized a variety of finance related news excerpts, analyst 
 This above image shows the code I used to classify the role, goal, backstory, and task I used to create my Agent. I had some experience through my Generative AI class as to the important purpose of this step. I chose its role to be an Investment Analysis Advisor which is self-explanatory. I set its goal to 'Answer questions and provide advice about the current market situation and investments using the database' in order for it be clear as to what it goals will be. This was helpful in creating a more standard type of response. Finally I kept my Task the same, which was to create a comprehensive answer based off of the database content.
 
 ## Installation and setup instructions:
+Local: Download Folder, Create own datasources or use own. 
+run this: https://colab.research.google.com/drive/1a97iz9a4N8OzQ0_olHIXmvucVBY8GKRE?usp=sharing
 
+## Streamlit APP Link:
+https://lang-processing-8aeydrvcgk6m6zb6ej5vtv.streamlit.app/
