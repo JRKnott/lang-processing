@@ -83,14 +83,11 @@ class RAGAgent:
         task1 = Task(description=question,
                     agent=agent,
                     expected_output="A comprehensive answer based on the database content.")
-        task2 = Task(description=question,
-                    agent=agent,
-                    expected_output="Give an investment suggestion in this format:" \
-                    "Ticker: NVDA, Stock: Nvidia, Suggestion: Buy")
+        
         
         # TO DO: Create the Crew and run it
         crew = Crew(agents= [agent],
-                    tasks = [task1, task2],
+                    tasks = [task1],
                     verbose = True,
                     max_rpm = 20)
         
